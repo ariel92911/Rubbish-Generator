@@ -1,0 +1,60 @@
+<!--  ./views/index.handlebars -->
+<div class="container">
+  <h2 class="text-center mt-4 mb-4">你想對誰說幹話？</h2>
+  <form method="POST" action="/">
+    <div class="card-deck mb-4">
+      <div class="card text-center">
+        <img class="card-img-top rounded mx-auto d-block"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="工程師"
+          height="250">
+        <div class="card-body text-center">
+          <label class="card-body">
+            <input type="radio" name="career" value="engineer"
+              {{#ifEquals options.career 'engineer'}}checked{{/ifEquals}}>
+            <label class="form-check-label" for="invalidCheck2">
+              工程師
+            </label>
+          </label>
+        </div>
+      </div>
+
+      <div class="card text-center">
+        <img class="card-img-top "
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="設計師"
+          height="250">
+        <div class="card-body text-center">
+          <label class="card-body">
+            <input type="radio" name="career" value="designer"
+              {{#ifEquals options.career 'designer'}}checked{{/ifEquals}}>
+            <label class="form-check-label" for="invalidCheck2">
+              設計師
+            </label>
+          </label>
+        </div>
+      </div>
+
+      <div class="card text-center">
+        <img class="card-img-top "
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="創業家"
+          height="250">
+        <div class="card-body text-center">
+          <label class="card-body">
+            <input type="radio" name="career" value="entrepreneur"
+              {{#ifEquals options.career 'politician'}}checked{{/ifEquals}}>
+            <label class="form-check-label" for="invalidCheck2">
+              創業家
+            </label>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    {{#if rubbish}}
+    <div class="alert alert-info text-center" role="alert">
+      <span></span>{{rubbish}}<span</span> </div> {{/if}} <div class="text-center">
+        <button class="btn btn-success" type="submit">產生幹話</button>
+    </div>
+
+  </form>
+
+</div>
