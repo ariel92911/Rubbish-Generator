@@ -27,7 +27,7 @@ $ npm install
 $ npm run dev
 ```
 
-6. 在瀏覽器輸入以下網址以使用 Password Generator
+6. 在瀏覽器輸入以下網址以使用 Rubbish-Generator
 ```
 http://localhost:3000
 ```
